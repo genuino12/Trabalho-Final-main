@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Trabalho Final da Materia Programção para Internet",
   "main": "index.js",
-  "scripts": { 
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/genuino12/Trabalho-Final-main/issues"
   },
-  "homepage": "https://github.com/genuino12/Trabalho-Final-main#readme"
+  "homepage": "https://github.com/genuino12/Trabalho-Final-main#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
 }
