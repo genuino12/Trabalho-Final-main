@@ -68,13 +68,12 @@ body {
 
 
 #logoutBtn {
-    margin-top: 15px;
-    width: 100%;
+    width: 48%;
     padding: 10px;
-    background-color: #dc3545;
-    color: white;
     border: none;
     border-radius: 5px;
+    background-color: #28a745;
+    color: white;
     cursor: pointer;
 }
 
@@ -107,17 +106,17 @@ section {
     margin: 20px;
 }
 
-.button-group button {
-    width: 48%;
-    padding: 10px; 
-    border: none; 
-    border-radius: 5px; 
-    background-color: #007BFF; 
-    color: white; 
-    cursor: pointer; 
+/* Estilos para o botão de submit */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
 }
 
-.button-group button:hover {
-    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
-
