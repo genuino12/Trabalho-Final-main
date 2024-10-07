@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Candidato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-container">
+            <h1>Cadastro de Candidato</h1>
+            <form id="candidatoForm" novalidate>
+                <div class="form-group">
+                    <label for="nomeCandidato">Nome do Candidato:</label>
+                    <input type="text" id="nomeCandidato" name="nomeCandidato" required>
+                </div>
+                <div class="form-group">
+                    <label for="partido">Partido:</label>
+                    <input type="text" id="partido" name="partido" required>
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número do Candidato:</label>
+                    <input type="number" id="numero" name="numero" required>
+                </div> 
+                <button type="submit">Cadastrar</button> <br> <br>
+                <button id="cancelBtn"  type="reset">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
