@@ -3,7 +3,7 @@ export default function autenticar(requisacao, resposta) {
     const senha = requisacao.body.senha;
 
     
-    if (usuario === 'admin' && senha === 'admin') {
+    if (usuario === 'admin@admin.com' && senha === '123') {
         requisacao.session.autenticado = true; 
         resposta.redirect('./login.html');
     } else {
