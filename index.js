@@ -22,7 +22,7 @@ app.use(express.static('./Publico'));
 
 
 app.get('/login', (req, res) => {
-    res.redirect('/login.html');
+    res.redirect('login.html');
 });
 
 
