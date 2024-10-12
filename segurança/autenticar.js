@@ -1,21 +1,26 @@
-export default function autenticar(requisacao, resposta) {
-    const usuario = requisacao.body.usuario;
-    const senha = requisacao.body.senha;
+export default function autenticar(requisicao, resposta) {
+    const email = requisicao.body.usuario;
+    const senha = requisicao.body.senha;
+    console.log('Dados recebidos:', requisicao.body);
+    console.log('Email:', email);  
+    console.log('Senha:', senha);
 
-    if (usuario === 'admin@admin.com' && senha === '123') {
-        requisacao.session.autenticado = true; 
-        resposta.redirect('./Privado/index.html');  
-    } else {
+    resposta.setHeader('Content-Type', 'text/html; charset=utf-8'); 
+
+    if (email === 'admin@admin123.com' && senha === '123456') {
+        requisicao.session.autenticado = true; 
+        resposta.redirect('/Privado/index.html'); 
         
-        resposta.write('<p>Usuário ou Senha Inválida</p>');
+    } else {
+        resposta.write('<p>Email ou Senha Inválida</p>');
         resposta.write('<a href="/login.html">Voltar para login</a>');
         resposta.end();
     }
 }
 
-export function verificaAutenticacao(requisacao, resposta, next) {
 
-    if (requisacao.session.autenticado) {
+export function verificaAutenticacao(requisicao, resposta, next) {
+    if (requisicao.session.autenticado) {
         next(); 
     } else {
         resposta.redirect('/login.html');

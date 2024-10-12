@@ -21,15 +21,15 @@ app.use(session({
 app.use(express.static('./Publico'));
 
 
-app.use(verificaAutenticacao, express.static('./Privado'));
-
-
 app.get('/login', (req, res) => {
     res.redirect('/login.html');
 });
 
 
-app.post('/login.html', autenticar);
+app.post('/login', autenticar);
+
+
+app.use('/Privado', verificaAutenticacao, express.static('./Privado'));
 
 
 app.listen(porta, host, () => {
