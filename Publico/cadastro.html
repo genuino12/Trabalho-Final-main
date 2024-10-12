@@ -14,33 +14,38 @@
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
+                    <span id="nomeError" class="error-message" style="color: red;"></span>
                 </div>
                 <div class="form-group">
                     <label for="CPF">CPF:</label>
                     <input type="text" id="cpf" name="cpf" required>
+                    <span id="cpfError" class="error-message"style="color: red";></span>
                 </div>
                 <div class="form-group">
                     <label for="telofone">Telefone:</label>
                     <input type="text" id="telefone" name="telefone" required>
+                    <span id="telefoneError" class="error-message" style="color: red;"></span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                    <span id="emailError" class="error-message"style="color: red;"></span>
                 </div>
                 <div class="form-group">
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
+                    <span id="senhaError" class="error-message" style="color: red;"></span>
                 </div>
                 <div class="form-group">
                     <label for="Rsenha">Repeti Senha:</label>
                     <input type="password" id="Rsenha" name="Rsenha" required>
+                    <span id="confirmarSenhaError" class="error-message" style="color: red;"></span>
                 </div>
                 <button type="submit">Cadastrar</button> <br> <br>
-                <button id="cancelBtn" type="button">Cancelar</button>
+                <button id="cancelBtn" type="reset">Cancelar</button>
             </form>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="validacao.js"></script>
 </body>
 </html>
