@@ -18,16 +18,25 @@ app.use(session({
 }));
 
 
+
 app.use(express.static('./Publico'));
 
 
 app.get('/login', (req, res) => {
-    res.redirect('login.html');
+    res.redirect('/login.html');  
 });
 
 
 app.post('/login', autenticar);
 
+app.get('/logout', (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+            return res.redirect('/login.html');  
+        }
+        res.redirect('/login.html'); 
+    });
+});
 
 app.use('/Privado', verificaAutenticacao, express.static('./Privado'));
 
