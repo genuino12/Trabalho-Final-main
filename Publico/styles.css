@@ -182,6 +182,25 @@ button[type="submit"]:hover {
 #cancelBtn:hover {
     background-color: #c82333; 
 }
+.erro {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+input:focus {
+    border-color: #666;
+}
+
+input[style*="red"] {
+    border: 1px solid red;
+}
 
 
 
